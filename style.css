@@ -1,0 +1,338 @@
+/* CSS Reset - Removes default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f1624 100%);
+    min-height: 100vh;
+    color: white;
+    padding: 40px 20px;
+}
+
+/* Main Navigation Container */
+nav {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    background: #2a2a2a;
+    border-radius: 50px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Styling */
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* Navigation Links Container */
+.nav-links {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+}
+
+/* Individual Link Styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+/* Link Hover Effect */
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Contact Button Styling */
+.contact-btn {
+    background: white;
+    color: #2a2a2a;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    flex-shrink: 0;
+}
+
+/* Contact Button Hover Effect */
+.contact-btn:hover {
+    background: #f0f0f0;
+}
+
+/* ============ HERO SECTION ============ */
+
+/* Hero Section Container */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Hero Flex Container */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+}
+
+/* ===== LEFT SIDE - Profile Section ===== */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Profile Image with Gradient Border */
+.profile-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profile Name Below Image */
+.profile-name {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* ===== RIGHT SIDE - Hero Content ===== */
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+/* Main Hero Title */
+.hero-title {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+/* Green Ampersand */
+.highlight-green {
+    color: #10b981;
+}
+
+/* Gold "Curious Learner" Text */
+.highlight-gold {
+    color: #f59e0b;
+}
+
+/* Blinking Cursor Animation */
+.cursor {
+    color: #10b981;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Hero Description Text */
+.hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 40px;
+}
+
+/* ===== CTA Buttons ===== */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Primary Button - "Lets Connect" */
+.btn-primary {
+    background: transparent;
+    color: white;
+    padding: 16px 32px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-primary .arrow {
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Secondary Button - "Want to see something?" */
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 16px 32px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Icon Container in Secondary Button */
+.btn-secondary .icons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-secondary .icons span {
+    font-size: 18px;
+    animation: bounce 2s infinite;
+}
+
+.btn-secondary .icons span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.btn-secondary .icons span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* Tablet and Below */
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        overflow-x: auto;
+        margin-bottom: 40px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
